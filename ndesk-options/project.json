@@ -1,0 +1,23 @@
+{
+  "name": "ndesk-options",
+  "version": "0.2.1",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": false
+    // "compile": {
+    //   "exclude": ["**/*.cs"],
+    //   "includeFiles": [
+    //     "src/NDesk.Options/AssemblyInfo.cs",
+    //     "src/NDesk.Options/NDesk.Options/Options.cs"
+    //   ]
+    // }
+  },
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "System.ComponentModel.TypeConverter": "4.3.0", 
+    "System.ObjectModel": "4.3.0" 
+  },
+  "frameworks": {
+    "netstandard1.0": { }
+  }
+}
