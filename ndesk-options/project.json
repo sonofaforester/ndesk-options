@@ -4,13 +4,6 @@
   "buildOptions": {
     "debugType": "portable",
     "emitEntryPoint": false
-    // "compile": {
-    //   "exclude": ["**/*.cs"],
-    //   "includeFiles": [
-    //     "src/NDesk.Options/AssemblyInfo.cs",
-    //     "src/NDesk.Options/NDesk.Options/Options.cs"
-    //   ]
-    // }
   },
   "dependencies": {
     "NETStandard.Library": "1.6.0",
