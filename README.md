@@ -16,15 +16,17 @@ lambda delegates to provide a short, concise specification of the option
 names to parse, whether or not those options support values, and what to do 
 when the option is encountered.  It's entirely callback based:
 
-	var verbose = 0;
-	var show_help = false;
-	var names = new List<string> ();
+```cs
+var verbose = 0;
+var show_help = false;
+var names = new List<string> ();
 
-	var p = new OptionSet () {
-		{ "v|verbose", v => { if (v != null) ++verbose; } },
-		{ "h|?|help",  v => { show_help = v != null; } },
-		{ "n|name=",   v => { names.Add (v); } },
-	};
+var p = new OptionSet () {
+    { "v|verbose", v => { if (v != null) ++verbose; } },
+    { "h|?|help",  v => { show_help = v != null; } },
+    { "n|name=",   v => { names.Add (v); } },
+};
+```
 
 Distribution:
 ------------
@@ -120,9 +122,9 @@ var p = new OptionSet () {
 
 Random other tidbits:
 
- - Boolean options (those w/o `=` or `:` in the option format string)
-   are explicitly enabled if they are followed with `+`, and explicitly
-   disabled if they are followed with `-`:
+ - Boolean options (those w/o '`=`' or '`:`' in the option format string)
+   are explicitly enabled if they are followed with '`+`', and explicitly
+   disabled if they are followed with '`-`':
    
    ```cs
    string a = null;
