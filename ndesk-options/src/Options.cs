@@ -27,7 +27,7 @@
 //
 
 //
-// A Getopt::Long-inspired option parsing library for C#.
+// A Getopt::Long-inspired option parsing library for .NET Core.
 //
 // NDesk.Options.OptionSet is built upon a key/value table, where the
 // key is a option format string and the value is a delegate that is 
