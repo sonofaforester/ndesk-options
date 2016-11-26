@@ -1,9 +1,12 @@
-NDesk.Options
+ndesk-options
 =============
 
 This is ndesk-options, a program option parser for .NET Core.
 
-See: http://www.ndesk.org/Options
+It is based on Jonathan Pryor's NDesk.Options library with minor modifications
+that allow compilation against the .NET Standard 1.0 API.
+
+The URL of the original project is: http://www.ndesk.org/Options
 
 Overview:
 --------
@@ -23,33 +26,9 @@ when the option is encountered.  It's entirely callback based:
 		{ "n|name=",   v => { names.Add (v); } },
 	};
 
-However, C# 3.0 features are not required, and can be used with C# 2.0:
-
-	int          verbose   = 0;
-	bool         show_help = false;
-	List<string> names     = new List<string> ();
-
-	OptionSet p = new OptionSet ()
-	  .Add ("v|verbose", delegate (string v) { if (v != null) ++verbose; })
-	  .Add ("h|?|help",  delegate (string v) { show_help = v != null; })
-	  .Add ("n|name=",   delegate (string v) { names.Add (v); });
-
-
 Distribution:
 ------------
 
-In accordance with the Guidelines for Application Deployment [0], there are
-pkg-config files to permit simple access to the source or pre-compiled
-assemblies for re-use.
-
-There are two ways to use NDesk.Options:
-
-	- Bundle src/NDesk.Options/NDesk.Options/Options.cs with your app.
-
-		pkg-config --variable=Sources ndesk-options
-
-	- Use a prebuilt NDesk.Options.dll:
-
-		pkg-config --variable=Libraries ndesk-options
-
-[0] http://www.mono-project.com/Guidelines:Application_Deployment#Libraries_with_Unstable_APIs
+All .NET Standard libraries are distributed and consumed as NuGet packages.
+To create a NuGet package of ndesk-options, simply use the `dotnet pack`
+command.
