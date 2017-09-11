@@ -4,7 +4,7 @@ ndesk-options
 This is ndesk-options, a program option parser for .NET Core.
 
 It is based on Jonathan Pryor's NDesk.Options library with minor modifications
-that allow compilation against the .NET Standard 1.0 API.
+that allow compilation against the .NET Standard 2.0 API.
 
 The URL of the original project is: http://www.ndesk.org/Options
 
